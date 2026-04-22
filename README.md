@@ -59,3 +59,8 @@ student-dashboard-snowflake/
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/049e4d85-00e5-4b37-9db7-a302cfdd3e31" />
 <img width="1695" height="777" alt="image" src="https://github.com/user-attachments/assets/64f51e38-e081-461d-a8d4-77189777a8ad" />
 
+## Cortex Analyst Dashbord
+
+<img width="1920" height="1080" alt="Screenshoot_Cortex_Analyst" src="https://github.com/user-attachments/assets/17c14ad7-21a8-44de-ba58-d1e513b0e6b9" />
+
+
