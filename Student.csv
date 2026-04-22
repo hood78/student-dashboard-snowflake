@@ -1,0 +1,17 @@
+STUDENTS_ID,STUDENTS_Name,Student_Gender,STUDENTS_Age,STUDENTS_Course,STUDENTS_Branch,STUDENTS_Year,STUDENTS_City,STUDENTS_Marks
+101,Amit Sharma,Male,20,B.tech,Cse,2,Mumbai,85
+102,Priya Patel,Female,21,B.tech,Cse,1,Pune,90
+103,Rahul Verma,Male,19,B.tech,Cse,2,Delhi,78
+104,Neha Singh,Female,22,B.tech,Cse,3,Nagpur,88
+105,Arjun Mehta,Male,20,B.tech,Cse,4,Chennai,72
+106,Simran Kaur,Female,21,B.tech,IT,2,Hyderabad,91
+107,Rohan Gupta,Male,22,B.tech,civil,3,kolkata,84
+108,Anjali Das,Female,23,B.tech,mech,1,Mumbai,80
+109,Karan Yadav,Male,19,B.tech,ece,3,pune,76
+110,Meera Joshi,Female,18,B.tech,civil,4,Kochi,89
+111,Vikas Kumar,Male,20,B.tech,Mech,2,Bhopal,74
+112,Sneha Rao,Female,22,B.tech,entc,3,Indore,92
+113,Manisha Jain,Female,20,B.tech,Ai/Ml,1,Raipur,79
+114,Pooja Nair,Female,21,B.tech,IT,4,Bangalore,87
+115,Aaditya Roy,Male,22,B.tech,Mech,3,Chandigarh,81
+116,Raj Singh,Male,19,B.tech,Civil,2,srinagar,84

@@ -1,0 +1,118 @@
+# Snowflake Student Dashboard Project – Complete Workflow
+
+## 1. Project Objective
+
+Build an interactive Student Performance Dashboard using Snowflake, SQL, Streamlit, and Cortex Analyst to analyze student data.
+
+## 2. Tools & Technologies Used
+
+* Snowflake Data Cloud
+* SQL Worksheet
+* Snowflake Stage / CSV Upload
+* Streamlit in Snowflake
+* Cortex Analyst
+* GitHub
+
+## 3. Dataset Used
+
+Student dataset with columns:
+
+* ID
+* NAME
+* AGE
+* GENDER
+* COURSE
+* BRANCH
+* YEAR
+* MARKS
+* CITY
+
+## 4. Database Setup in Snowflake
+
+### Steps:
+
+1. Open Snowflake SQL Worksheet.
+2. Run SQL:
+
+```sql
+USE ROLE ACCOUNTADMIN;
+USE WAREHOUSE COMPUTE_WH;
+CREATE DATABASE IF NOT EXISTS MYDB;
+USE DATABASE MYDB;
+CREATE SCHEMA IF NOT EXISTS PUBLIC;
+USE SCHEMA PUBLIC;
+```
+
+## 5. Create Table
+
+```sql
+CREATE OR REPLACE TABLE STUDENTS (
+ID INT,
+NAME STRING,
+AGE INT,
+GENDER STRING,
+COURSE STRING,
+BRANCH STRING,
+YEAR INT,
+MARKS INT,
+CITY STRING
+);
+```
+
+## 6. Load CSV Data
+
+### Method:
+
+1. Create Stage.
+2. Upload `student.csv`.
+3. Load with COPY INTO.
+
+```sql
+CREATE OR REPLACE FILE FORMAT my_csv_format TYPE=CSV SKIP_HEADER=1;
+CREATE OR REPLACE STAGE my_stage;
+COPY INTO STUDENTS
+FROM @my_stage/student.csv
+FILE_FORMAT=(FORMAT_NAME=my_csv_format);
+```
+
+## 7. Verify Data
+
+```sql
+SELECT * FROM STUDENTS;
+```
+
+## 8. Build Streamlit Dashboard
+
+### Steps:
+
+1. In Snowflake click **+ Create > Streamlit App**.
+2. Name: `student_dashboard`
+3. Choose Database: `MYDB`, Schema: `PUBLIC`.
+4. Replace sample code with custom dashboard code.
+5. Click Run.
+
+### Dashboard Features:
+
+* KPI Cards
+* Filters (Branch, City, Gender)
+* Average Marks by Branch
+* Students by City
+* Top 10 Students
+* Weak Students (<75 marks)
+* Download CSV Report
+
+## 9. Use Cortex Analyst
+
+### Steps:
+
+1. Open Cortex Analyst.
+2. Create Semantic View.
+3. Select `MYDB.PUBLIC.STUDENTS`.
+4. Select columns.
+5. Ask questions:
+
+* Show top 5 students by marks
+* Average marks by branch
+* Students below 75
+* Which city performs best?
+
